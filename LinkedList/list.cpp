@@ -26,6 +26,22 @@ void buat_baru(infotype *x)
     cin>>k.notlp;
     *x=k;
 }
+void insertfirst (list *l, address p)//ica
+{
+    if((*l).awal==NULL)
+    {
+        (*l).awal=p;
+        next((*l).awal)=NULL;
+
+
+    }
+    else
+    {
+        next(p)=NULL;
+        next(p)=(*l).awal;
+        (*l).awal=p;
+    }
+}
 
 void insertafter(list *l, address p, address s)
 {

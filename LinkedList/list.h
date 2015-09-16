@@ -28,7 +28,9 @@ struct list
 address alokasi (infotype x);
 void buat_baru(infotype *x);
 void cariid(infotype *x);
+void insertfirst (list *l, address p);
 void insertafter(list *l, address p, address s);
+void deletefirst(list *l,address *p);
 void deletelast(list *l,address *p);
 void deleteafter(list *l, address *p, address s);
 address cari(list l, infotype x);

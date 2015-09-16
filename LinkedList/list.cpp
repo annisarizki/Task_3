@@ -33,8 +33,6 @@ void insertfirst (list *l, address p)
     {
         (*l).awal=p;
         next((*l).awal)=NULL;
-
-
     }
     else
     {

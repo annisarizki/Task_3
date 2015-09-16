@@ -30,7 +30,9 @@ int main()
         {
         case 1:
             system("cls");
-            
+            buat_baru(&b);
+            c=alokasi(b);
+            insertfirst(&l,c);
             break;
         case 2:
             system("cls");
@@ -52,7 +54,9 @@ int main()
 
         case 4:
             system("cls");
-            
+            address p;
+            p = new Elmlist;
+            deletefirst(&l,&p);
 			break;
 
         case 5:

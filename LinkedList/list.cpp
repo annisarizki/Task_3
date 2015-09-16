@@ -27,6 +27,23 @@ void buat_baru(infotype *x)
     *x=k;
 }
 
+void insertfirst (list *l, address p)
+{
+    if((*l).awal==NULL)
+    {
+        (*l).awal=p;
+        next((*l).awal)=NULL;
+
+
+    }
+    else
+    {
+        next(p)=NULL;
+        next(p)=(*l).awal;
+        (*l).awal=p;
+    }
+}
+
 void insertafter(list *l, address p, address s)
 {
     address Q;
@@ -60,6 +77,15 @@ address cari(list l,infotype x)
     }
     return NULL;
 }
+
+void deletefirst(list *l,address *p)
+{
+    *p=(*l).awal;
+    (*l).awal=next((*l).awal);
+    next(*p)=NULL;
+    delete p;
+}
+
 void deletelast(list *l,address *p)
 {
     address Q;
